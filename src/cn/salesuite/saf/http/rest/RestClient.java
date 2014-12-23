@@ -230,6 +230,7 @@ public class RestClient {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			callback.onFail(e);
 			L.e("get method error!", e);
 		}
 	}
@@ -277,6 +278,7 @@ public class RestClient {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			callback.onFail(e);
 			L.e(e);
 		}
 	
@@ -310,6 +312,7 @@ public class RestClient {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			callback.onFail(e);
 			L.e(e);
 		}
 
